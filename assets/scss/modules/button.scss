@@ -1,0 +1,27 @@
+// standard button
+.bt {
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 40px;
+  color: $white;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  padding: rem(14) rem(30);
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  outline: 0;
+  -webkit-appearance: none;
+}
+
+.bt:hover {
+  background-color: $white;
+  color: $dark-grey;
+  cursor: pointer;
+}
+
+.bt:active {
+  background-color: #FCF9F9;
+  color: $dark-grey;
+}
