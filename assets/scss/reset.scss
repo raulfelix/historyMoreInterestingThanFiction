@@ -1,0 +1,73 @@
+html, body, div, img, ol, ul, li, a, h1, h2, h3, h4, h5, h6, p,
+header, footer, section, article, figure, figcaption, button, input, blockquote, textarea {
+  border: 0;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  @include box-sizing(border-box);
+  
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+html {
+  font-size: 100%;
+  overflow-x: hidden; 
+  
+  touch-action: manipulation;     /* IE11 */
+
+}
+
+body {
+  font-size: rem($base-font-size);
+  background-color: $white;
+  
+  // better font rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, 
+blockquote:after,
+q:before, 
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  &:hover {
+    
+  }
+}
+
+input:focus, input:active, 
+button:focus, button:active {
+  outline: none;
+}
+
+input::-ms-clear {
+  display: none;
+} 
+
+ul, li {
+  list-style: none;
+}

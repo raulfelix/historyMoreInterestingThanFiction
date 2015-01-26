@@ -1,0 +1,94 @@
+//
+// globals
+//
+$base_font_size: 16;
+
+
+//
+// colours
+//
+$black: #333333;
+$white: #ffffff;
+$smoke: #f5f5f5;
+$grey: #eeeeee;
+$light-grey: #dddddd;
+$dark-grey: #999999;
+$darker-grey: #666666;
+$darker-grey-2: #7F8D95;
+$darker-grey-active: #727272;
+$negative: #f00;
+$positive: #417505;
+$highlight: #00c4ff;
+$blue: #449FDB;
+$newbuild: #9BC6D1; 
+$newbuildAlt: #82B7C5; 
+
+
+//
+// mixins
+//
+@mixin transition($properties...) {
+  -webkit-transition: $properties;
+     -moz-transition: $properties;
+       -o-transition: $properties;
+          transition: $properties;
+}
+
+@mixin transform($properties...) {
+  -webkit-transform: $properties;
+     -moz-transform: $properties;
+       -o-transform: $properties;
+          transform: $properties;
+}
+
+@mixin transform-origin($properties...) {
+  -webkit-transform-origin: $properties;
+     -moz-transform-origin: $properties;
+       -o-transform-origin: $properties;
+          transform-origin: $properties;
+}
+
+@mixin box-shadow($properties...) {
+  -webkit-box-shadow: $properties;
+     -moz-box-shadow: $properties;
+       -o-box-shadow: $properties;
+          box-shadow: $properties;
+}
+
+@mixin box-sizing($property) {
+  -webkit-box-sizing: $property;
+     -moz-box-sizing: $property;
+       -o-box-sizing: $property;
+          box-sizing: $property;
+}
+
+@mixin scrollable {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin ie-swipe() {
+  // override panning in y-direction to allow for swiping
+  touch-action: pan-y; 
+}
+
+@mixin bp($point) {
+  @if $point == mobile {
+    @media (min-width: 0px) and (max-width: 700px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 701px) and (max-width: 1024px) { @content; }
+  }
+  
+  @else if $point == desktop {
+    @media (min-width: 1025px) { @content; }
+  }
+}
+
+
+//
+// functions
+//
+@function rem($size) {
+  @return #{ (1 / $base_font_size) * $size }rem;
+}
