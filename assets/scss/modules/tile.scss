@@ -1,0 +1,39 @@
+.tile {
+  position: relative;
+  
+  .tile-view {
+    display: block;
+    position: relative;
+    margin-bottom: rem(10);
+    
+    &:hover {
+      .tile-cover {
+        opacity: 0;  
+      }
+    }
+  }
+  
+  .tile-tag {
+    display: inline-block;
+    margin-bottom: rem(10);
+    text-transform: uppercase;
+  }
+  
+  .tile-time {
+    position: absolute;
+    left: rem(10);
+    bottom: rem(10);
+  }
+  
+  .tile-img {
+    display: block;
+    width: 100%;
+  }
+  
+  .tile-cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}

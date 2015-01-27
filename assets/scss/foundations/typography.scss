@@ -1,0 +1,35 @@
+body, .bt {
+  font-family: $regular;
+}
+
+
+.tile {
+  .tile-label {
+    font-size: 32px;  
+    font-family: $bold;
+    letter-spacing: -1px;
+    
+    &:hover {
+      color: #FF8578;
+    }
+  }
+  
+  .tile-tag {
+    font-family: $semibold;
+    font-size: 12px;
+    
+    &:hover {
+      color: #FF8578;  
+    }
+  }
+  
+  .tile-time {
+    color: $white;
+    font-family: $semibold;
+    font-size: 12px;
+  }
+}
+
+.footer .footer-legal {
+  font-size: 12px;
+}
