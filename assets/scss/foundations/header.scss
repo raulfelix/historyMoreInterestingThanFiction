@@ -1,0 +1,144 @@
+.header {
+  background-color: $white;
+  height: rem(120);
+  text-align: center;
+  
+  .header-controls {
+    position: absolute;
+    right: rem(10);
+    top: rem(45);
+  }
+  
+  .header-action {
+    background-color: transparent;
+    font-size: 24px;
+    color: $dark;
+    
+    &:hover {
+      cursor: pointer;
+      color: #FF8578;
+    }
+  }
+  
+  .header-logo {
+    background: url('../images/logo_dark@2x.png') no-repeat center center;
+    background-size: auto 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: rem(-101);
+    height: 20px;
+    top: rem(45);
+    text-align: center;
+    font-size: 12px;
+    line-height: 5.1;
+    color: $dark-grey;
+  }
+}
+
+.home-template .header {
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  width: 100%;
+  z-index: 10;
+  
+  .header-action {
+    color: $white;
+  }
+  
+  .header-logo {
+    visibility: hidden;
+  }
+}
+
+.feature {
+  height: rem(340);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  position: relative;
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .feature-details {
+    position: absolute;
+    bottom: rem(20);
+    max-width: 50%;
+  }
+  
+  .grid, .grid-row, .f-1 {
+    height: 100%;
+  }
+  
+  .feature-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    padding: rem(16) rem(24);
+  }
+}
+
+.feature-home {
+  height: rem(700);
+  background-position: center 20%;
+  
+  .feature-logo {
+    display: block;
+     background: url('../images/logo_white@2x.png') no-repeat center center;
+    background-size: auto 100%;
+    height: 31px;
+    width: 100%;
+    margin-top: rem(240);
+    z-index: 11;
+  }
+  
+  .feature-text {
+    margin-top: rem(30);
+    text-align: center;
+
+    .line1 {
+      font-family: $light;
+      letter-spacing: 2px;
+      font-size: 38px;
+      position: relative;
+      
+      &:before,
+      &:after {
+        content: '';
+        height: 2px;
+        background-color: $white;
+        display: block;
+        position: absolute;
+        width: 60%;
+        top: 50%;
+      }
+      
+      &:before {
+        left: -110px;
+      }
+      &:after {
+        right: -110px;
+      }
+    }
+    
+    .line2 {
+      display: block;
+      font-family: $bold;
+      font-size: 58px;
+      letter-spacing: -2px;
+      line-height: 1.3;
+    }
+    
+    .line3 {
+      display: block;
+      font-family: $semibolditalic;
+      font-size: 34px;
+    }
+  }
+}

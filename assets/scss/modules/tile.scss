@@ -37,3 +37,8 @@
     width: 100%;
   }
 }
+
+// hide the post tag on tag screens
+.tag-template .tile-tag {
+  display: none;
+}

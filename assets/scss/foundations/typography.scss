@@ -2,6 +2,13 @@ body, .bt {
   font-family: $regular;
 }
 
+h3 {
+  font-size: 32px;
+}
+
+strong {
+  font-family: $bold;
+}
 
 .tile {
   .tile-label {
@@ -32,4 +39,24 @@ body, .bt {
 
 .footer .footer-legal {
   font-size: 12px;
+}
+
+.feature {
+  color: $white;
+  
+  h3 {
+    font-family: $semibold; 
+    margin-bottom: rem(6);
+    letter-spacing: -1px;
+  }
+  
+  p {
+    font-size: 12px;
+    font-family: $semibold;
+  }
+  
+  .feature-caption {
+    font-size: 12px;
+    font-family: $semibold;
+  }
 }
