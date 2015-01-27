@@ -1,13 +1,17 @@
 @import 'util';
-
 @import 'reset';
-//@import 'grid';
 
 
 // foundations
 @import 'foundations/header';
 @import 'foundations/footer';
+@import 'foundations/grid';
+@import 'foundations/content';
+@import 'foundations/fonts';
+@import 'foundations/icons';
+@import 'foundations/typography';
 
 
 // modules
 @import 'modules/button';
+@import 'modules/tile';
