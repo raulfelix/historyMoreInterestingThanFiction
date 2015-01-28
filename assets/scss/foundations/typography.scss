@@ -1,32 +1,108 @@
-body, .bt {
+body, .bt, p, ul, ol, a {
   font-family: $regular;
+}
+
+a {
+  color: $blue;
+  &:hover {
+    color: #2481a5;
+    text-decoration: underline;
+  }
+}
+
+//------------
+// headings
+//------------
+h1, h2, h3, h4, h5, h6 {
+  font-family: $bold;
+  letter-spacing: -1px;
+  margin-bottom: rem(12);
+}
+
+h1 {
+  font-size: 46px;
+}
+
+h2 {
+  font-size: 38px;
 }
 
 h3 {
   font-size: 32px;
 }
 
-strong {
-  font-family: $bold;
+h4 {
+  font-size: 24px;
 }
 
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+
+//------------
+// lists
+//------------
+p, ul, ol {
+  font-size: 16px;
+  color: $black;
+  margin-bottom: rem(24);
+  line-height: 1.6;
+}
+
+ul, ol {
+  padding-left: rem(20);
+  li {
+    list-style: disc;
+    margin-left: rem(30);
+  }
+}
+
+ol {
+  li {
+    list-style: decimal;
+  }
+}
+
+
+strong {
+  font-family: $bold;
+  font-weight: normal;
+}
+
+mark {
+  background-color: $warm;
+}
+
+
+//------------------
+// tile formatting
+//------------------
 .tile {
   .tile-label {
+    color: $dark;
     font-size: 32px;  
     font-family: $bold;
     letter-spacing: -1px;
     
     &:hover {
       color: #FF8578;
+      text-decoration: none;
     }
   }
   
   .tile-tag {
+    color: $dark;
     font-family: $semibold;
     font-size: 12px;
     
     &:hover {
-      color: #FF8578;  
+      color: #FF8578;
+      text-decoration: none;
     }
   }
   
@@ -41,6 +117,10 @@ strong {
   font-size: 12px;
 }
 
+
+//------------------
+// feature section
+//------------------
 .feature {
   color: $white;
   
@@ -51,12 +131,13 @@ strong {
   }
   
   p {
-    font-size: 12px;
+    color: $white;
+    font-size: 13px;
     font-family: $semibold;
   }
   
   .feature-caption {
-    font-size: 12px;
+    font-size: 13px;
     font-family: $semibold;
   }
 }

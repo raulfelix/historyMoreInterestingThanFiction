@@ -1,0 +1,151 @@
+.post-template {
+  .grid-narrow {
+    max-width: 54%;  
+  }
+}
+
+.post {
+  
+  .post-image {
+    width: 110%;
+    margin: 0 -5% rem(30) -5%;
+  }
+  
+  .post-tag {
+    margin-bottom: rem(60);
+    text-align: center;
+
+    a {
+      color: $blue;
+      text-transform: uppercase;
+      font-size: 13px;
+      display: inline-block;
+      padding: rem(10) rem(65) 0 rem(65);
+      border-top: 1px solid $smoke;
+    }
+  }
+  
+  .post-header {
+    margin-bottom: rem(30);
+    h1 {
+      text-align: center;
+      margin-bottom: rem(40);
+    }
+  }
+  
+  .post-author {
+    display: block;
+    text-align: center;
+
+    a {
+      color: $blue;
+    }
+  }
+  
+  .post-content {
+    padding-bottom: rem(60);
+  }
+  
+  .post-footer {
+    font-family: $regular;
+    font-size: 14px;
+    padding-bottom: rem(60);
+    text-align: center;
+    color: #999;
+      
+    .post-clip {
+      background-color: $smoke;
+      width: rem(100);
+      height: 2px;
+      display: block;
+      margin: 0 auto rem(10);
+    }
+    time {
+      display: block;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-bottom: rem(40);
+    }
+  }
+  
+}
+
+//------------------
+// post formatting
+//------------------
+.post-content {
+  
+  a {
+    color: $blue;
+    &:hover {
+      color: #2481a5;
+      text-decoration: underline;
+    }
+  }
+  
+  p {
+    position: relative;
+  }
+  
+  span {
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    right: rem(-190);
+    bottom: 0;
+    width: rem(130);
+  }
+  
+  label {
+    color: #999;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  blockquote {
+    padding: rem(20) rem(40);
+    margin-top: 10px;
+    margin-bottom: 40px;
+    position: relative;
+    display: block;
+    
+    p {
+      text-align: center;
+      font-size: 24px;
+      color: $blue;
+      font-family: $semibolditalic;
+      margin-bottom: rem(10);
+      letter-spacing: -1px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    figcaption {
+      color: $blue;
+      font-size: 13px;
+      text-align: center;
+      &:before {
+        content: '-';
+        display: inline-block;
+        margin-right: rem(5);
+      }
+    }
+  }
+
+  
+  img {
+    width: 110%;
+    margin: 0 -5% 0 -5%;
+  }
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: #EFEFEF 1px solid;
+    margin: rem(60) 0;
+    padding: 0;
+  }
+}

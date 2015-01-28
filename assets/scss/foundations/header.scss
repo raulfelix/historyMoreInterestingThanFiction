@@ -16,7 +16,6 @@
     
     &:hover {
       cursor: pointer;
-      color: #FF8578;
     }
   }
   
@@ -32,6 +31,10 @@
     font-size: 12px;
     line-height: 5.1;
     color: $dark-grey;
+    
+    &:hover {
+      text-decoration: none;  
+    }
   }
 }
 

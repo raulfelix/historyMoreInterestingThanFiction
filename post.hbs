@@ -1,0 +1,31 @@
+{{!< default}}
+
+{{#post}}
+<div class="grid grid-narrow">
+  <div class="grid-row">
+    <div class="f-1">
+      
+      <article class="{{post_class}}">
+        <header class="post-header">
+          <div class="post-tag">{{tags}}</div>
+          <h1 class="post-title">{{title}}</h1>
+        </header>
+
+        <img class="post-image" src="{{image}}">
+        <section class="post-content">
+          {{content}}
+        </section>
+
+        <footer class="post-footer">
+          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+          <span class="post-clip"></span>
+
+          {{#author}}
+            <div class="post-author">Written by <a href="{{url}}">{{name}}</a></div>
+          {{/author}}
+        </footer>
+      </article>
+    </div>
+  </div>
+</div>
+{{/post}}
