@@ -1,11 +1,13 @@
 {{!< default }}
-      
-<div class="grid">
-  <div class="grid-row">
-  {{#foreach posts}}
-    <div class="f-1-3">
-      {{> post_tile }}
+            
+<div class="content">      
+  <div class="grid">
+    <div class="grid-row">
+    {{#foreach posts}}
+      <div class="f-1-3">
+        {{> post_tile }}
+      </div>
+    {{/foreach}}
     </div>
-  {{/foreach}}
   </div>
 </div>
