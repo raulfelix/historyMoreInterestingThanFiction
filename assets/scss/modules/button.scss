@@ -19,9 +19,19 @@
   background-color: $white;
   color: $dark-grey;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .bt:active {
   background-color: #FCF9F9;
   color: $dark-grey;
+}
+
+.bt-dark {
+  color: $light-grey;
+  border: 1px solid $light-grey;
+  
+  &:hover {
+    background-color: $smoke;  
+  }
 }

@@ -1,0 +1,25 @@
+.pagination {
+  margin-top: rem(60);
+  
+  span, i {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  i {
+    font-size: 24px;
+  }
+  
+  .pagination-prev,
+  .pagination-next {
+    font-size: 13px;
+    font-family: $semibold;
+    text-transform: uppercase;
+    padding: rem(10) rem(16) rem(10) rem(10);
+  }
+  
+  .pagination-next {
+    float: right;
+    padding: rem(10) rem(10) rem(10) rem(16);
+  }
+}

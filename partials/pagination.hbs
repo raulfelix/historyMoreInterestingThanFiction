@@ -1,0 +1,14 @@
+<div class="f-1 pagination" role="navigation">
+  {{#if prev}}
+  <a class="bt bt-dark pagination-prev" href="{{pageUrl prev}}">
+    <i class="icon-keyboard-arrow-left"></i>
+    <span>Prev</span>
+  </a>
+  {{/if}}
+  {{#if next}}
+  <a class="bt bt-dark pagination-next" href="{{pageUrl next}}">
+    <span>Next</span>
+    <i class="icon-keyboard-arrow-right"></i>
+  </a>
+  {{/if}}
+</div>

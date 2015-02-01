@@ -3,11 +3,13 @@
 <div class="content">      
   <div class="grid">
     <div class="grid-row">
-    {{#foreach posts}}
-      <div class="f-1-3">
-        {{> post_tile }}
-      </div>
-    {{/foreach}}
+      {{#foreach posts}}
+        <div class="f-1-3">
+          {{> post_tile }}
+        </div>
+      {{/foreach}}
+      
+      {{pagination}}
     </div>
   </div>
 </div>
