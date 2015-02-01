@@ -1,6 +1,6 @@
 .post-template {
   .grid-narrow {
-    max-width: 54%;  
+    max-width: 52%;  
   }
 }
 
@@ -147,5 +147,46 @@
     border-top: #EFEFEF 1px solid;
     margin: rem(60) 0;
     padding: 0;
+  }
+}
+
+@include bp(small) {
+  
+  .post-template {
+    .grid-narrow {
+      max-width: 100%;  
+    }
+  }
+  
+  .post {
+    
+    // images
+    .post-image, img {
+      width: 100%;
+      margin: 0 0 rem(20) 0;
+    }
+    img {
+      margin-bottom: 0;
+    }
+    
+    label {
+      font-size: 12px;
+    }
+    
+    blockquote {
+      padding: rem(10) rem(20);
+
+      p {
+        font-size: 18px;
+      }
+
+      figcaption {
+        font-size: 12px;
+      }
+    }
+    
+    hr {
+      margin: rem(34) 0;
+    }
   }
 }
