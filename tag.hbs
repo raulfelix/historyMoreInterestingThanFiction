@@ -5,14 +5,16 @@
 <div class="content">      
   <div class="grid">
     <div class="grid-row">
-      {{#foreach posts}}
+      {{#foreach posts columns=3}}
         <div class="f-1-3 bp-s-1">
           {{> post_tile }}
         </div>
+        {{#if @rowEnd}}
+          <span class="grid-break"></span>
+        {{/if}}
       {{/foreach}}
       
       {{pagination}}
-      
     </div>
   </div>
 </div>
