@@ -1,0 +1,38 @@
+.modal {
+  background-color: rgba(255, 255, 255, 0.97);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+  
+  @include transition(opacity 200ms ease-in-out, visibility 0ms ease 200ms);
+}
+
+.active .modal {
+  visibility: visible;
+  opacity: 1;
+  @include transition(opacity 200ms ease-in-out, visibility 0ms ease 0ms);
+}
+
+.active {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.modal-close {
+  position: absolute;
+  background-color: transparent;
+  color: $warm;
+  right: 8px;
+  font-size: 32px;
+  top: 40px;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
