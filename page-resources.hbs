@@ -1,0 +1,64 @@
+{{!< default }}
+            
+{{> featured }}
+
+{{#post}}
+<div class="content">      
+  <div class="grid">
+    <div class="grid-row">
+      <aside></aside>
+      <div class="section">{{content}}</div>
+    </div>
+  </div>
+</div>
+{{/post}}
+
+<script type="text/javascript">
+
+  (function() {
+    
+    var ResourceMenu = (function() {
+      var section;
+      
+      function go(ev) {
+        var el = section.querySelector('#' + ev.currentTarget.id);
+        Velocity(el, 'scroll');  
+      }
+      
+      function init() {
+        var
+          aside,
+          children,
+          fragment = document.createDocumentFragment();
+        
+        aside = document.querySelector('aside');  
+        section = document.querySelector('.section');  
+        children = section.childNodes;
+        
+        for (var i = 0; i < children.length; i++) {
+          var child = children[i];
+          
+          if (child.nodeName === 'H1' || child.nodeName === 'H2') {
+            var item = child.cloneNode(true);
+            fragment.appendChild(item);
+          
+            if (child.nodeName === 'H2') {
+              item.addEventListener('click', go, false);
+            }
+          }
+          
+        }
+        
+        aside.appendChild(fragment);
+      }
+      
+      return {
+        init: init  
+      };
+      
+    })();
+    
+    ResourceMenu.init();
+  })();
+  
+</script>
