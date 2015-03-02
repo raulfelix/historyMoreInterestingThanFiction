@@ -15,6 +15,7 @@
     color: $dark;
     
     &:hover {
+      color: $black;
       cursor: pointer;
     }
   }
@@ -89,7 +90,8 @@
 
 .feature-home {
   height: rem(700);
-  background-position: center 20%;
+  background-position: center 28%;
+  background-size: 100% auto;
   
   .feature-logo {
     display: block;
@@ -142,6 +144,47 @@
       display: block;
       font-family: $semibolditalic;
       font-size: 34px;
+    }
+  }
+}
+
+@include bp(small) {
+  
+  .feature {
+    height: rem(280);
+    background-size: auto 140%;
+    
+    .feature-details {
+      bottom: rem(40);
+      max-width: 87%;
+    }
+  }
+
+  .feature-home {
+    background-position: center 28%;
+    background-size: 110% auto;
+    
+    .feature-logo {
+      height: 21px;
+      margin-top: rem(48);
+    }
+    
+    .feature-text {
+      .line1 {
+        font-size: 20px;
+        
+        &:before, &:after {
+          width: 90%;
+        }
+      }
+      
+      .line2 {
+        font-size: 42px;
+      }
+      
+      .line3 {
+        font-size: 21px;
+      }
     }
   }
 }

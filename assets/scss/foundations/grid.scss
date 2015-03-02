@@ -68,6 +68,14 @@
   width: 83.33333333333334%;
 }
 
+@include bp(tablet) {
+  
+  .bp-t-1-2 {
+    width: 50%;
+  }
+  
+}
+
 @include bp(small) {
   
   .bp-s-1 {

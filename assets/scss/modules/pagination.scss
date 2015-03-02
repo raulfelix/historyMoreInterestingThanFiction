@@ -1,5 +1,4 @@
 .pagination {
-  margin-top: rem(60);
   
   span, i {
     display: inline-block;
@@ -12,6 +11,7 @@
   
   .pagination-prev,
   .pagination-next {
+    margin-top: rem(60);
     font-size: 13px;
     font-family: $semibold;
     text-transform: uppercase;

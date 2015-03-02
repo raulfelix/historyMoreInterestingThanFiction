@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
   
-  <title>{{meta_title}}</title>
+  <title>HMITF</title>
   <meta name="description" content="{{meta_description}}" />
 
   <link rel="stylesheet" type="text/css" href="{{asset "css/styles.css"}}" />
@@ -18,13 +18,15 @@
 
 <body class="{{body_class}}">
   
+  {{> nav}}
+  
   <header class="header">
     <div class="grid">
       <div class="grid-row">
         <div class="f-1">
           <a class="header-logo" href="{{ @blog.url }}">History more interesting than fiction</a>
           <div class="header-controls">
-            <button class="header-action"><i class="icon-hamburger"></i></button>
+            <button id="nav-open" class="header-action"><i class="icon-hamburger"></i></button>
           </div>
         </div>
       </div>
@@ -34,12 +36,13 @@
   {{{body}}}
   
   <footer class="footer">
-    <button type="button" class="bt bt-frame">BACK TO TOP</button>
+    <button id="to-top" type="button" class="bt bt-frame">BACK TO TOP</button>
     <div class="footer-logo"></div>
-    <div class="footer-legal">Copyright &copy; 2015. Curated from the beautiful mind of Miss Matic… Powered by <strong>Ghost</strong></div>
+    <div class="footer-legal">Copyright &copy; 2015. All Rights Reserved. Miss Matic.</div>
   </footer>
 
-  
+  <script type="text/javascript" src="{{asset "js/velocity.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/nav.js"}}"></script>
 </body>
 
 </html>

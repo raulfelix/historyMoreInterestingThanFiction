@@ -43,6 +43,11 @@ h6 {
   font-size: 14px;
 }
 
+i {
+  font-family: $italic;
+  font-style: normal;
+}
+
 
 //------------
 // lists
@@ -50,7 +55,7 @@ h6 {
 p, ul, ol {
   font-size: 16px;
   color: $black;
-  margin-bottom: rem(24);
+  margin-bottom: rem(30);
   line-height: 1.6;
 }
 
@@ -75,7 +80,7 @@ strong {
 }
 
 mark {
-  background-color: $warm;
+  background-color: rgba(62, 165, 206, 0.2);
 }
 
 
@@ -85,12 +90,12 @@ mark {
 .tile {
   .tile-label {
     color: $dark;
-    font-size: 32px;  
+    font-size: 30px;  
     font-family: $bold;
     letter-spacing: -1px;
     
     &:hover {
-      color: #FF8578;
+      color: $black;
       text-decoration: none;
     }
   }
@@ -101,7 +106,7 @@ mark {
     font-size: 12px;
     
     &:hover {
-      color: #FF8578;
+      color: $blue;
       text-decoration: none;
     }
   }
@@ -139,5 +144,36 @@ mark {
   .feature-caption {
     font-size: 13px;
     font-family: $semibold;
+  }
+}
+
+@include bp(small) {
+  
+  .tile {
+    margin-top: rem(20);
+    .tile-label {
+      font-size: 24px;
+    }
+  }
+  
+  p, ul, ol {
+    font-size: 14px;
+    margin-bottom: rem(20);
+    line-height: 1.6;
+  }
+  
+  .feature {
+    h3 {
+      font-family: $bold;
+      margin-bottom: 0;
+    }
+    
+    .feature-caption, p {
+      font-size: 10px;
+    }
+    
+    .feature-caption {
+      padding: rem(8);  
+    }
   }
 }
