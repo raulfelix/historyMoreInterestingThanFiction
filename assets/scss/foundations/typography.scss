@@ -3,9 +3,9 @@ body, .bt, p, ul, ol, a {
 }
 
 a {
-  color: $blue;
+  color: $contrast;
   &:hover {
-    color: #2481a5;
+    color: $contrast;
     text-decoration: underline;
   }
 }
@@ -89,31 +89,28 @@ mark {
 //------------------
 .tile {
   .tile-label {
-    color: $dark;
-    font-size: 30px;  
+    color: $white;
+    font-size: 28px;
     font-family: $bold;
-    letter-spacing: -1px;
-    
     &:hover {
-      color: $black;
       text-decoration: none;
     }
   }
-  
+
   .tile-tag {
-    color: $dark;
-    font-family: $semibold;
-    font-size: 12px;
-    
-    &:hover {
-      color: $blue;
-      text-decoration: none;
-    }
+    color: $white;
+    font-family: $regular;
+    font-size: 13px;
+
+//    &:hover {
+//      color: $blue;
+//      text-decoration: none;
+//    }
   }
-  
+
   .tile-time {
     color: $white;
-    font-family: $semibold;
+    font-family: $regular;
     font-size: 12px;
   }
 }
@@ -128,52 +125,52 @@ mark {
 //------------------
 .feature {
   color: $white;
-  
+
   h3 {
-    font-family: $semibold; 
+    font-family: $bold;
     margin-bottom: rem(6);
     letter-spacing: -1px;
   }
-  
+
   p {
     color: $white;
-    font-size: 13px;
-    font-family: $semibold;
+    font-size: 14px;
+    font-family: $regular;
+    margin-bottom: 0;
   }
-  
+
   .feature-caption {
     font-size: 13px;
-    font-family: $semibold;
+    font-family: $regular;
   }
 }
 
 @include bp(small) {
-  
+
   .tile {
-    margin-top: rem(20);
     .tile-label {
       font-size: 24px;
     }
   }
-  
+
   p, ul, ol {
     font-size: 14px;
     margin-bottom: rem(20);
     line-height: 1.6;
   }
-  
+
   .feature {
     h3 {
       font-family: $bold;
       margin-bottom: 0;
     }
-    
+
     .feature-caption, p {
       font-size: 10px;
     }
-    
+
     .feature-caption {
-      padding: rem(8);  
+      padding: rem(8);
     }
   }
 }

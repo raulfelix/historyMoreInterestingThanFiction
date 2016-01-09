@@ -6,13 +6,14 @@ $base_font_size: 16;
 //
 // fonts
 //
-$regular: 'open_sansregular';
-$italic: 'open_sansitalic';
+$regular: 'noto_serifregular';
+$italic: 'noto_serifitalic';
 $light: 'open_sanslight';
 $semibold: 'open_sanssemibold';
 $semibolditalic: 'open_sanssemibold_italic';
-$bold: 'open_sansbold';
 
+
+$bold: 'open_sansbold';
 
 //
 // colours
@@ -25,6 +26,10 @@ $dark-grey: #707070;
 $dark: #4A4A4A;
 $blue: #3EA5CE;
 $warm: #FF8578;
+
+$black2: #3A4145;
+$grey: #C8C8C8;
+$contrast: #47E3C2;
 
 
 //
@@ -70,11 +75,6 @@ $warm: #FF8578;
   -webkit-overflow-scrolling: touch;
 }
 
-@mixin ie-swipe() {
-  // override panning in y-direction to allow for swiping
-  touch-action: pan-y; 
-}
-
 
 @mixin bp($point) {
   @if $point == small {
@@ -83,7 +83,7 @@ $warm: #FF8578;
   @else if $point == tablet {
     @media (min-width: 701px) and (max-width: 1024px) { @content; }
   }
-  
+
   @else if $point == desktop {
     @media (min-width: 1025px) { @content; }
   }

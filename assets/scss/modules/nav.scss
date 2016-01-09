@@ -1,46 +1,42 @@
 //---------------
 // Navigation
 //---------------
-.nav {
-  margin: rem(100) auto 0;
-  max-width: rem(500);
-  
-  .nav-title {
-    color: $light-grey;
-    border-bottom: 1px solid $smoke;
-    display: inline-block;
-    font-size: 13px;
-    margin: rem(50) 0;
-    padding: rem(10) rem(100);
-  }
-  
-  .nav-item {
-    margin-bottom: rem(40);
-    text-align: center;
-    font-family: $semibold;
-    color: $dark;
+nav {
+  left: rem(80);
+  top: 50%;
+  margin-top: rem(-98);
+  position: absolute;
+  z-index: 10;
+
+  .logo {
+    padding: 0;
+
     &:hover {
-      color: $warm;
-      text-decoration: none;
+      background-color: transparent;
+    }
+
+    img {
+      margin-bottom: rem(20);
+      width: rem(160);
     }
   }
-  
-  .nav-pages {
-    text-align: center;
-    .nav-item {
-      display: inline-block;
-      margin: 0 rem(30);
-    }
-  }
-  
-  .nav-topics {
+
+  a {
+    border-radius: 50px;
+    color: $white;
+    display: block;
+    font-size: 13px;
+    font-family: $bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: rem(16) rem(30);
     text-align: center;
 
-    .nav-item {
-      display: block;
-      font-size: 32px;
-      font-family: $bold;
-      letter-spacing: -1px;
+    &:hover {
+      background-color: rgba(0,0,0,0.2);
+      color: $contrast;
+      cursor: pointer;
+      text-decoration: none;
     }
   }
 }

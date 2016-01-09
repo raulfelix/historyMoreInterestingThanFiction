@@ -1,38 +1,64 @@
-.post-template {
-  .grid-narrow {
-    max-width: 52%;  
+.p {
+  position: relative;
+
+  .p-time {
+    font-family: $regular;
+  }
+
+  .p-text1 {
+    color: $black;
+    display: inline-block;
+    font-size: 30px;
+    font-family: $bold;
+    margin-bottom: rem(8);
+
+    &:hover {
+      color: $contrast;
+    }
+
+  }
+
+  .p-tag {
+    color: $grey;
+    font-size: rem(13);
   }
 }
 
+
+.post-template {
+  .grid-narrow {
+    max-width: 52%;
+  }
+}
+
+
 .post {
-  
+
   .post-image {
     width: 100%;
     margin: 0 0 rem(30) 0;
   }
-  
+
   .post-tag {
-    margin-bottom: rem(60);
     text-align: center;
+    margin-bottom: rem(10);
 
     a {
       color: $blue;
-      text-transform: uppercase;
-      font-size: 13px;
+      font-size: 14px;
       display: inline-block;
-      padding: rem(10) rem(65) 0 rem(65);
-      border-top: 1px solid $smoke;
     }
   }
-  
+
   .post-header {
-    margin-bottom: rem(30);
+    margin-top: rem(50);
+
     h1 {
       text-align: center;
-      margin-bottom: rem(40);
+      margin-bottom: rem(30);
     }
   }
-  
+
   .post-author {
     display: block;
     text-align: center;
@@ -41,18 +67,18 @@
       color: $blue;
     }
   }
-  
+
   .post-content {
     padding-bottom: rem(60);
   }
-  
+
   .post-footer {
     font-family: $regular;
     font-size: 14px;
     padding-bottom: rem(60);
     text-align: center;
     color: #999;
-      
+
     .post-clip {
       background-color: $smoke;
       width: rem(100);
@@ -67,14 +93,14 @@
       margin-bottom: rem(40);
     }
   }
-  
+
 }
 
 //------------------
 // post formatting
 //------------------
 .post-content {
-  
+
   a {
     color: $blue;
     &:hover {
@@ -82,11 +108,11 @@
       text-decoration: underline;
     }
   }
-  
+
   p {
     position: relative;
   }
-  
+
   span {
     font-size: 12px;
     color: #999;
@@ -95,22 +121,21 @@
     bottom: 0;
     width: rem(130);
   }
-  
+
   label {
     color: $light-grey;
     display: block;
     font-size: 13px;
     line-height: 1.4;
-    
+
     position: absolute;
     right: rem(-160);
     width: rem(140);
     bottom: rem(10);
   }
-  
+
   blockquote {
     padding: 0 rem(20);
-    margin-left: rem(40);
     margin-bottom: rem(40);
     position: relative;
     display: block;
@@ -139,11 +164,11 @@
     }
   }
 
-  
+
   img {
     width: 100%;
   }
-  
+
   section {
     position: relative;
     padding-bottom: 56.25%;
@@ -151,7 +176,7 @@
     overflow: hidden;
     margin-bottom: rem(40);
   }
-  
+
   iframe {
     position: absolute;
     top: 0;
@@ -171,15 +196,15 @@
 }
 
 @include bp(small) {
-  
+
   .post-template {
     .grid-narrow {
-      max-width: 100%;  
+      max-width: 100%;
     }
   }
-  
+
   .post {
-    
+
     // images
     .post-image, img {
       width: 100%;
@@ -188,11 +213,11 @@
     img {
       margin-bottom: 0;
     }
-    
+
     label {
       font-size: 12px;
     }
-    
+
     blockquote {
       padding: rem(10) rem(20);
 
@@ -204,7 +229,7 @@
         font-size: 12px;
       }
     }
-    
+
     hr {
       margin: rem(34) 0;
     }
