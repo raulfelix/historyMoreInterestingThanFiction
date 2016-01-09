@@ -1,8 +1,8 @@
 module.exports = function(grunt) {
-  
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    
+
     // sassy settings
     sass: {
       build: {
@@ -19,15 +19,13 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: [
-          'assets/js/*.js'
-        ],
-        tasks: ['concat']
+          'assets/js/**/*.js'
+        ]
       },
-      
+
       src: {
         files: [
-          'assets/scss/*.scss',
-          'assets/scss/*/*.scss'
+          'assets/scss/**/*.scss'
         ],
         tasks: ['sass'],
         options: {
@@ -36,6 +34,8 @@ module.exports = function(grunt) {
         }
       }
     },
+
+    concat: {},
 
     clean: {
       // clean compiled dirs
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  
+  grunt.loadNpmTasks('grunt-sass');
+
   grunt.registerTask('do', ['watch']);
 };
