@@ -1,31 +1,26 @@
 {{!< default}}
 
 {{#post}}
-<div class="grid grid-narrow">
-  <div class="grid-row">
-    <div class="f-1">
-      
-      <article class="{{post_class}}">
-        <header class="post-header">
-          <div class="post-tag">{{tags}}</div>
-          <h1 class="post-title">{{title}}</h1>
-        </header>
+  {{#if image}}
+    <div class="nav-global">{{navigation}}</div>
+    <header class="feature" style="background-image: url({{image}});">
+      <div class="overlay"></div>
+      <div class="wrap">
+        <div class="feature-text">
+          <h1 class="text-1">{{title}}</h1>
+          <time class="text-2">{{date format="DD MMM YYYY"}}</time>
+        </div>
+      </div>
+    </header>
+    <article class="wrap {{post_class}} push-down">{{> post_content }}</article>
+  {{else}}
+    <header class="header">{{navigation}}</header>
+    <article class="wrap {{post_class}}">
+      <div class="post-content">
+        <h1 class="text-1">{{title}}</h1>
+        {{> post_content }}
+      </div>
+    </article>
+  {{/if}}
 
-        <img class="post-image" src="{{image}}">
-        <section class="post-content">
-          {{content}}
-        </section>
-
-        <footer class="post-footer">
-          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-          <span class="post-clip"></span>
-
-          {{#author}}
-            <div class="post-author">Written by <a href="{{url}}">{{name}}</a></div>
-          {{/author}}
-        </footer>
-      </article>
-    </div>
-  </div>
-</div>
 {{/post}}

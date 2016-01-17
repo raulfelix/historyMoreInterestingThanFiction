@@ -1,176 +1,97 @@
-body, .bt, p, ul, ol, a {
+body, .bt, p, ul, ol {
   font-family: $regular;
 }
 
-a {
-  color: $contrast;
-  &:hover {
-    color: $contrast;
-    text-decoration: underline;
-  }
-}
 
-//------------
-// headings
-//------------
 h1, h2, h3, h4, h5, h6 {
   font-family: $bold;
   letter-spacing: -1px;
-  margin-bottom: rem(12);
 }
-
-h1 {
-  font-size: 46px;
-}
-
-h2 {
-  font-size: 38px;
-}
-
-h3 {
-  font-size: 32px;
-}
-
-h4 {
-  font-size: 24px;
-}
-
-h5 {
-  font-size: 20px;
-}
-
-h6 {
-  font-size: 14px;
-}
-
-i {
-  font-family: $italic;
-  font-style: normal;
-}
-
 
 //------------
 // lists
 //------------
-p, ul, ol {
-  font-size: 16px;
-  color: $black;
-  margin-bottom: rem(30);
-  line-height: 1.6;
-}
+.post {
 
-ul, ol {
-  padding-left: rem(20);
-  li {
-    list-style: disc;
-    margin-left: rem(30);
-  }
-}
-
-ol {
-  li {
-    list-style: decimal;
-  }
-}
-
-
-strong {
-  font-family: $bold;
-  font-weight: normal;
-}
-
-mark {
-  background-color: rgba(62, 165, 206, 0.2);
-}
-
-
-//------------------
-// tile formatting
-//------------------
-.tile {
-  .tile-label {
-    color: $white;
-    font-size: 28px;
-    font-family: $bold;
+  a {
+    color: $contrast;
     &:hover {
-      text-decoration: none;
+      color: $contrast;
+      text-decoration: underline;
     }
   }
 
-  .tile-tag {
-    color: $white;
-    font-family: $regular;
-    font-size: 13px;
-
-//    &:hover {
-//      color: $blue;
-//      text-decoration: none;
-//    }
+  //------------
+  // headings
+  //------------
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $bold;
+    letter-spacing: -1px;
+    margin-bottom: rem(12);
   }
 
-  .tile-time {
-    color: $white;
-    font-family: $regular;
-    font-size: 12px;
+  h1 {
+    font-size: 46px;
   }
-}
 
-.footer .footer-legal {
-  font-size: 12px;
-}
-
-
-//------------------
-// feature section
-//------------------
-.feature {
-  color: $white;
+  h2 {
+    font-size: 38px;
+  }
 
   h3 {
-    font-family: $bold;
-    margin-bottom: rem(6);
-    letter-spacing: -1px;
+    font-size: 32px;
   }
 
-  p {
-    color: $white;
+  h4 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
     font-size: 14px;
-    font-family: $regular;
-    margin-bottom: 0;
   }
 
-  .feature-caption {
-    font-size: 13px;
-    font-family: $regular;
-  }
-}
-
-@include bp(small) {
-
-  .tile {
-    .tile-label {
-      font-size: 24px;
-    }
+  i {
+    font-family: $italic;
+    font-style: normal;
   }
 
   p, ul, ol {
-    font-size: 14px;
-    margin-bottom: rem(20);
+    font-size: 20px;
+    color: $black;
+    margin-bottom: rem(30);
     line-height: 1.6;
   }
 
-  .feature {
-    h3 {
-      font-family: $bold;
-      margin-bottom: 0;
-    }
-
-    .feature-caption, p {
-      font-size: 10px;
-    }
-
-    .feature-caption {
-      padding: rem(8);
+  ul, ol {
+    padding-left: rem(20);
+    li {
+      list-style: disc;
+      margin-left: rem(30);
     }
   }
+
+  ol {
+    li {
+      list-style: decimal;
+    }
+  }
+
+
+  strong {
+    font-family: $bold;
+    font-weight: normal;
+  }
+
+  mark {
+    background-color: rgba(62, 165, 206, 0.2);
+  }
+}
+
+
+@include bp(small) {
+
 }

@@ -1,18 +1,47 @@
 //---------------
 // Navigation
 //---------------
+.nav-global {
+  nav {
+    position: relative;
+    margin-top: 0;
+    height: rem(80);
+    left: auto;
+
+    .logo {
+      height: rem(80);
+      margin: 0 rem(40);
+    }
+
+    .logo, a {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: rem(80);
+    }
+
+    a {
+      padding: 0 rem(20);
+    }
+  }
+}
+
 nav {
   left: rem(80);
   top: 50%;
-  margin-top: rem(-98);
+  margin-top: rem(-135);
   position: absolute;
   z-index: 10;
 
   .logo {
+    background: url('../images/logo_white@2x.png') no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    height: rem(70);
+    width: rem(160);
     padding: 0;
 
     &:hover {
-      background-color: transparent;
+      background-color: transparent !important;
     }
 
     img {
@@ -37,6 +66,63 @@ nav {
       color: $contrast;
       cursor: pointer;
       text-decoration: none;
+    }
+  }
+}
+
+.post-template {
+  nav {
+    .logo {
+      background: url('../images/logo_dark@2x.png') no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+    }
+
+    a {
+      color: $dark-grey;
+      &:hover {
+        background-color: transparent;
+        color: $contrast;
+      }
+    }
+  }
+}
+
+@include bp(menu) {
+
+  .header,
+  nav {
+    height: rem(80);
+    position: relative;
+  }
+
+  nav {
+    margin-top: 0;
+    left: auto;
+    top: auto;
+
+    .logo, a {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: rem(80);
+    }
+
+    .logo {
+      background: url('../images/logo_dark@2x.png') no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+      height: rem(80);
+      margin: 0 rem(40);
+    }
+
+    a {
+      color: $dark-grey;
+      padding: 0 rem(20);
+
+      &:hover {
+        background-color: transparent;
+        color: $contrast;
+      }
     }
   }
 }

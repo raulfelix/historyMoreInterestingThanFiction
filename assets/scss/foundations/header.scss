@@ -1,32 +1,72 @@
 .header {
-  height: rem(610);
+  height: rem(540);
   position: absolute;
   width: 100%;
 }
 
+.home-template {
+  .feature {
+    background-position: center 0;
+  }
+}
 .feature {
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: auto;
+  background-position: center;
+  background-size: 100% auto;
+  height: rem(540);
+  position: relative;
 
-  .overlay {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    bottom: 0;
+  figure {
+    color: $white;
+    font-size: rem(34);
+
+    max-width: rem(690);
+    position: relative;
+    z-index: 2;
+
+    &:first-child:first-of-type::first-letter {
+      color: $white;
+      float: left;
+      font-size: rem(89);
+      line-height: 0.9em;
+      padding-top: rem(7);
+      padding-right: rem(16);
+      padding-left: rem(2);
+      font-family: $regular;
+    }
+
+    &:first-line {
+      font-family: $boldnoto;
+    }
+
+    figcaption {
+      font-family: $boldnoto;
+      font-size: rem(14);
+      margin-top: rem(10);
+    }
   }
 
   .caption {
     right: 0;
     bottom: 0;
   }
-}
 
-.feature {
-  background-position: center 0%;
-  background-size: 100% auto;
-  height: rem(610);
-  position: relative;
+  .feature-text {
+    color: $white;
+    position: absolute;
+    bottom: rem(40);
+    max-width: rem(720);
+  }
+
+  .text-1 {
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+
+  .text-2 {
+    font-size: 13px;
+  }
 }
 
 @include bp(small) {

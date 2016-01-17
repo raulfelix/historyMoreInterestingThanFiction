@@ -1,0 +1,7 @@
+<nav>
+  <a href="/" class="logo" ></a>
+  <!-- Loop through the navigation items -->
+  {{#foreach navigation}}
+    <a class="nav-{{slug}}{{#if current}} nav-current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+  {{/foreach}}
+</nav>

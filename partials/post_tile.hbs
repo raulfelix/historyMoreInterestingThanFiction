@@ -1,11 +1,10 @@
-<section class="tile">
-  {{#foreach tags}}
-    <a class="tile-tag" href="/tag/{{ slug }}">{{ name }}</a>
-  {{/foreach}}
-  <a href="{{ url }}" class="tile-view">
-    <img class="tile-img" src="{{ image }}">
-    <div class="tile-cover overlay"></div>
-    <span class="tile-time">{{ date timeago="true" }}</span>
-  </a>
-  <a class="tile-label" href="{{ url }}">{{title}}</a>
+<section class="p">
+  <div class="p-details">
+    <span class="p-time">{{ date format="DD/MM/YYYY" }}</span> in
+    {{#foreach tags}}
+      <a class="p-tag p-tag-{{ slug }}" href="/tag/{{ slug }}">{{ name }}</a>
+    {{/foreach}}
+  </div>
+  <a href="{{ url }}" class="p-text1">{{title}}</a>
+  <p class="p-excerpt">{{excerpt}}</p>
 </section>
