@@ -1,7 +1,10 @@
-<nav>
+<nav id="nav">
   <a href="/" class="logo" ></a>
-  <!-- Loop through the navigation items -->
-  {{#foreach navigation}}
-    <a class="nav-{{slug}}{{#if current}} nav-current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
-  {{/foreach}}
+  <button type="text" id="nav-button" class="nav-mobile icon-menu"></button>
+  <div class="nav-shade"></div>
+  <div class="nav-container">
+    {{#foreach navigation}}
+      <a class="nav-{{slug}}{{#if current}} nav-current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+    {{/foreach}}
+  </div>
 </nav>

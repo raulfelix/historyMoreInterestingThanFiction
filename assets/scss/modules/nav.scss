@@ -70,6 +70,10 @@ nav {
   }
 }
 
+.nav-container {
+  display: inline-block;
+}
+
 .post-template {
   nav {
     .logo {
@@ -87,6 +91,13 @@ nav {
     }
   }
 }
+
+
+.nav-shade,
+.nav-mobile {
+  display: none;
+}
+
 
 @include bp(menu) {
 
@@ -125,4 +136,94 @@ nav {
       }
     }
   }
+}
+
+
+
+@include bp(small) {
+  
+  nav {
+    
+    .nav-mobile,
+    .nav-shade {
+      display: block;
+    }
+    
+    .nav-mobile {
+      background-color: transparent;
+      font-size: 32px;
+      
+      margin-top: rem(-16);
+      position: absolute;
+      right: rem(20);
+      top: 50%;
+      
+      &:active {
+        color: $contrast !important;
+      }
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    
+    .nav-shade {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 2;
+      background-color: #000;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(opacity 200ms ease 0s, visibility 0s linear 200ms);
+    }
+    
+    .logo {
+      margin: 0 rem(20) !important;
+    }
+    
+    .nav-container {
+      background-color: #202020;
+      padding-top: rem(80);
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: fixed;
+      width: rem(300);
+      z-index: 2;
+      @include transition(all 200ms ease);
+      @include transform(translateX(100%));
+    
+      a {
+        border-bottom: 1px solid #2E2E2E;
+        border-radius: 0;
+        display: block;
+      }
+    }
+    
+    &.active {
+      
+      .nav-mobile {
+        color: #888;
+        z-index: 3;
+        &:before {
+          content: "\e604";
+        }
+      }
+      
+      .nav-shade {
+        opacity: 0.4;
+        visibility: visible;
+        @include transition(opacity 200ms ease 0s, visibility 0s linear 0s);
+      }
+      
+      .nav-container {
+        @include transform(translateX(0));
+      }
+    }
+    
+  }
+  
 }
