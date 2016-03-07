@@ -83,7 +83,7 @@
 
   .feature-home {
     background-position: center 28%;
-    background-size: 110% auto;
+    background-size: 134% auto;
 
     .feature-logo {
       height: 21px;
@@ -108,4 +108,33 @@
       }
     }
   }
+}
+
+@include bp(small) {
+  
+  .feature {
+    .wrap {
+      padding: 0 rem(16);
+    }
+    
+    figure {
+      font-size: 20px;
+      
+      &:first-child:first-of-type::first-letter {
+        color: $white;
+        float: left;
+        font-size: rem(54);
+        line-height: 0.9em;
+        padding-top: rem(3);
+        padding-right: rem(9);
+        padding-left: rem(2);
+        font-family: $regular;
+      }
+    }
+    
+    .text-1 {
+      font-size: 30px;
+    }
+  }
+  
 }

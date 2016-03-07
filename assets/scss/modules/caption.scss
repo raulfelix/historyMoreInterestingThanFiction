@@ -5,3 +5,9 @@
   position: absolute;
   padding: rem(16) rem(24);
 }
+
+@include bp(small) {
+  .caption {
+    font-size: 10px;
+  }
+}

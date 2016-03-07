@@ -1,5 +1,7 @@
 (function() {
 
+  var nav;
+  
   //
   // Navigation controller
   //
@@ -8,10 +10,18 @@
     function up() {
       Velocity(document.body, 'scroll', { offset: '0px'});
     }
+    
+    function toggle() {
+      nav.classList.toggle('active');
+    }
 
     function init() {
-      // var backToTop = document.querySelector('#to-top');
-      // backToTop.addEventListener('click', up);
+      nav = document.getElementById('nav');
+      var navButton = document.getElementById('nav-button');
+      navButton.addEventListener('click', toggle, false);
+
+      var backToTop = document.getElementById('back-up');
+      if (backToTop) backToTop.addEventListener('click', up);
     }
 
     return {

@@ -7,6 +7,12 @@
   margin: auto;
 }
 
+@include bp(small) {
+  .content {
+    padding: rem(20) rem(20);
+  }
+}
+
 .push-down {
   padding-top: rem(60);
 }
