@@ -2,6 +2,12 @@
   position: relative;
   margin-bottom: rem(60);
 
+  p {
+    font-size: 20px;
+    color: #333333;
+    line-height: 1.6;
+  }
+  
   .p-text1 {
     color: $black;
     display: inline-block;
@@ -9,17 +15,19 @@
     font-family: $bold;
     margin-bottom: rem(8);
     letter-spacing: -1px;
+    
     &:hover {
       color: $contrast;
     }
-
   }
 
   .p-tag {
+    background-color: $smoke;
     font-size: rem(13);
-    color: $dark-grey;
+    color: $contrast;
     &:hover {
       color: $contrast;
+      background-color: #EEEEEE;
     }
   }
   
@@ -30,7 +38,7 @@
 
   .p-details {
     font-size: 14px;
-    font-family: $regular2;
+    font-family: $regular;
     margin-bottom: rem(8);
     color: $dark-grey;
   }
@@ -40,10 +48,6 @@
 //-------------------
 //-------------------
 .post {
-
-  .post-content {
-    // padding: rem(50) 0;
-  }
 
   .post-content > p:first-child:first-of-type::first-letter {
     color: $dark-grey;
@@ -98,20 +102,12 @@
 
 
   .post-footer {
-    font-family: $regular;
-    font-size: 14px;
-    padding-bottom: rem(60);
+    padding: rem(100);
     text-align: center;
-    color: #999;
 
-    .post-clip {
-      background-color: $smoke;
-      width: rem(100);
-      height: 2px;
-      display: block;
-      margin: 0 auto rem(10);
+    .bt {
+      letter-spacing: 2px;
     }
-
   }
 
 }
@@ -151,13 +147,13 @@
     margin-bottom: rem(40);
     position: relative;
     display: block;
-    border-left: 4px solid rgba(62, 165, 206, 0.2);
+    border-left: 4px solid rgba(0,0,0,0.2);
     font-family: $italic;
 
     p {
       font-size: 18px;
       font-family: $italic;
-      color: $blue;
+      color: $dark-grey;
       margin-bottom: rem(5);
       line-height: 1.3;
       &:last-child {
@@ -166,7 +162,7 @@
     }
 
     figcaption {
-      color: $blue;
+      color: $dark-grey;
       font-size: 13px;
       &:before {
         content: '-';
@@ -176,9 +172,16 @@
     }
   }
 
-
   img {
     width: 100%;
+  }
+  
+  figcaption {
+    color: $dark-grey;
+    font-size: 12px;
+    margin-top: rem(-20);
+    margin-bottom: rem(30);
+    text-align: right;
   }
 
   section {
@@ -209,5 +212,16 @@
 
 
 @include bp(small) {
-
+  .post {
+    .post-content {
+      padding: 0 rem(16);
+    }
+  }
+  
+  .p {
+    .p-text1 {
+      font-size: 24px;
+      line-height: 1.3;
+    }
+  }
 }

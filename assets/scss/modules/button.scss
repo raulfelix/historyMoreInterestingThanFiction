@@ -1,37 +1,29 @@
 // standard button
 .bt {
   background-color: transparent;
-  border: 1px solid $white;
   border-radius: 40px;
-  color: $white;
+  border: 2px solid #C8C8C8;
+  color: #C8C8C8;
   display: inline-block;
   vertical-align: middle;
   line-height: 1;
-  padding: rem(12) rem(30);
+  padding: rem(16) rem(34);
   text-decoration: none;
   text-align: center;
   font-size: 13px;
+  font-family: $bold;
   outline: 0;
+  text-transform: uppercase;
   -webkit-appearance: none;
 }
 
 .bt:hover {
-  background-color: $white;
-  color: $dark-grey;
+  border-color: $contrast;
+  color: $contrast;
   cursor: pointer;
-  text-decoration: none;
 }
 
 .bt:active {
-  background-color: #FCF9F9;
-  color: $dark-grey;
-}
-
-.bt-dark {
-  color: $light-grey;
-  border: 1px solid $light-grey;
-  
-  &:hover {
-    background-color: $smoke;  
-  }
+  background-color: $contrast;
+  color: $white;
 }
