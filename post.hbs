@@ -12,7 +12,10 @@
         </div>
       </div>
     </header>
-    <article class="wrap {{post_class}} push-down">{{> post_content }}</article>
+    <article class="wrap {{post_class}} push-down">
+      {{> post_content }}
+    </article>
+    {{> post_footer }}
   {{else}}
     <header class="header">{{navigation}}</header>
     <article class="wrap {{post_class}}">
@@ -21,6 +24,7 @@
         {{> post_content }}
       </div>
     </article>
+    {{> post_footer }}
   {{/if}}
 
 {{/post}}

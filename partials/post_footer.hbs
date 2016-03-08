@@ -1,0 +1,19 @@
+<footer class="post-footer">
+  <button type="button" class="bt bt-secondary" id="back-up">back to top</button>
+  
+  {{#prev_post}}
+    <section class="p p-next clearfix">
+      <div>
+        <a class="p-image" href="{{ url }}" >
+          <img src="{{image}}" />
+        </a>
+        <div class="p-details">
+          <h4>Next</h4>
+          <a href="{{ url }}" class="p-text1">{{title}}</a>
+          <div class="p-excerpt">{{excerpt characters="140"}}</div>
+        </div>
+      </div>
+    </section>
+  {{/prev_post}}
+  
+</footer>

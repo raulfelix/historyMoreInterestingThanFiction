@@ -42,3 +42,11 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}

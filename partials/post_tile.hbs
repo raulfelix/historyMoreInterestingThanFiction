@@ -1,6 +1,6 @@
 <section class="p">
   <div class="p-details">
-    <span class="p-time">{{ date format="DD/MM/YYYY" }}</span> in
+    <span class="p-time">{{ date format="Do MMM YYYY -" }}</span>
     {{#foreach tags}}
       <a class="p-tag p-tag-{{ slug }}" href="/tag/{{ slug }}">{{ name }}</a>
     {{/foreach}}

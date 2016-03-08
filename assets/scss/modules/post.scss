@@ -44,6 +44,88 @@
   }
 }
 
+.p-next {
+  background-color: $smoke;
+  padding: rem(40) 0;
+  margin-bottom: 0;
+  
+  & > div {
+    max-width: rem(740);
+    margin: auto;
+  }
+  
+  h4 {
+    color: #C8C8C8;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: rem(10);
+    text-transform: uppercase;
+  }
+  
+  .p-image {
+    float: left;
+    width: rem(230);
+    position: relative;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.3))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%); /* W3C */
+    }
+    
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  
+  .p-details {
+    margin-left: rem(250);
+  }
+}
+
+@include bp(small) {
+  .p-next {
+    padding: 0;
+    overflow: hidden;
+    
+    .p-image {
+      float: none;
+      width: 100%;
+    }
+    
+    .p-details {
+      position: absolute;
+      bottom: rem(20);
+      left: rem(20);
+      margin-left: 0;
+      z-index: 2;
+      
+      h4,
+      .p-text1 {
+        color: $white;
+      }
+
+      .p-text1 {
+        margin-bottom: 0;
+      }
+    }
+
+    .p-excerpt {
+      display: none;
+    }
+  }
+}
 
 //-------------------
 //-------------------
@@ -100,16 +182,16 @@
     text-align: center;
   }
 
+}
 
-  .post-footer {
-    padding: rem(100);
-    text-align: center;
+.post-footer {
+  padding: rem(100) 0 0 0;
+  text-align: center;
 
-    .bt {
-      letter-spacing: 2px;
-    }
+  .bt {
+    margin-bottom: rem(100);
+    letter-spacing: 2px;
   }
-
 }
 
 //------------------
@@ -119,6 +201,11 @@
 
   p {
     position: relative;
+    
+    em {
+      font-family: $italic;
+      font-style: normal;
+    }
   }
 
   span {
@@ -164,11 +251,8 @@
     figcaption {
       color: $dark-grey;
       font-size: 13px;
-      &:before {
-        content: '-';
-        display: inline-block;
-        margin-right: rem(5);
-      }
+      text-align: left;
+      margin: 0;
     }
   }
 
@@ -176,6 +260,7 @@
     width: 100%;
   }
   
+  // captions
   figcaption {
     color: $dark-grey;
     font-size: 12px;
