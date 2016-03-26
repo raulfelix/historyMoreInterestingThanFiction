@@ -1,3 +1,10 @@
 {{!< default }}
 
-This is the about page
+<div class="nav-global">{{navigation}}</div>
+<section class="paper-about post">
+  <div class="content wrap">
+    {{#post}}
+      {{content}}
+    {{/post}}
+  </div>
+</section>
