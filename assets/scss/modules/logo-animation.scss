@@ -1,0 +1,141 @@
+svg .circle1,
+svg .circle2,
+svg .circle3,
+svg .circle4,
+svg .last {
+  stroke: #fff;
+  stroke-width: 1;
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 100px;
+}
+
+svg .circle1 {
+  animation-name: draw, solidifystroke-light;
+  animation-duration: 1.2s, 500ms;
+  animation-delay: 0s, 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+svg .circle2 {
+  animation-name: draw, solidifystroke-light;
+  animation-duration: 1.2s, 500ms;
+  animation-delay: 0.5s, 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+svg .circle3 {
+  animation-name: draw, solidifystroke-light;
+  animation-duration: 1.2s, 500ms;
+  animation-delay: 1s, 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+svg .circle4 {
+  animation-name: draw, solidifystroke-light;
+  animation-duration: 1.2s, 500ms;
+  animation-delay: 1.5s, 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+svg .circle2fill,
+svg .circle3fill,
+svg .circle4fill,
+svg .last {
+  fill: transparent;
+}
+
+
+svg .circle2fill {
+  animation-name: infill-light, solidify-light;
+  animation-delay: 3s, 5s;
+  animation-duration: 500ms, 500ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+svg .circle3fill {
+  animation-name: infill-light, solidify-light;
+  animation-delay: 3.2s, 5.05s;
+  animation-duration: 500ms, 500ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+svg .circle4fill {
+  animation-name: infill-light, solidify-light;
+  animation-delay: 3.4s, 5.1s;
+  animation-duration: 500ms, 500ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+svg .last {
+  animation-name: draw, infill-light, solidifystroke-light, solidify-light;
+  animation-duration: 1s, 500ms, 500ms, 500ms;
+  animation-delay: 2s, 3.5s, 5s, 5.15s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+
+@keyframes infill-dark {
+  to {
+    fill: #9B9B9B;
+  }
+}
+
+@keyframes solidify-dark {
+  from {
+    fill: #9B9B9B;
+  }  
+  to {
+    fill: #000;
+  }
+}
+
+@keyframes solidifystroke-dark {
+  to {
+    stroke: #000;
+  }
+}
+
+
+
+@keyframes infill-light {
+  to {
+    fill: #fff;
+  }
+}
+
+@keyframes solidify-light {
+  from {
+    fill: #fff;
+  }  
+  to {
+    fill: #fff;
+  }
+}
+
+@keyframes solidifystroke-light {
+  to {
+    stroke: #fff;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

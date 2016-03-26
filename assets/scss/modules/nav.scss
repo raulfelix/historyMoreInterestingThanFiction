@@ -2,14 +2,21 @@
 // Navigation
 //---------------
 .nav-global {
+  svg {
+    display: none;
+  }
+  
   nav {
+    text-align: left;
     position: relative;
-    margin-top: 0;
     height: rem(80);
     left: auto;
-
+    max-width: rem(1140);
+    margin: auto;
+    margin-top: 0;
+    
     .logo {
-      height: rem(80);
+      width: rem(160);
       margin: 0 rem(40);
     }
 
@@ -26,18 +33,15 @@
 }
 
 nav {
-  left: rem(80);
+  text-align: center;
+  left: rem(85);
   top: 50%;
   margin-top: rem(-135);
   position: absolute;
   z-index: 10;
 
   .logo {
-    background: url('../images/logo_white@2x.png') no-repeat;
-    background-size: 100% auto;
-    background-position: center;
     height: rem(70);
-    width: rem(160);
     padding: 0;
 
     &:hover {
@@ -108,10 +112,16 @@ nav {
   }
 
   nav {
+    max-width: rem(1140);
     margin-top: 0;
     left: auto;
     top: auto;
-
+    text-align: left;
+    
+    svg {
+      display: none;
+    }
+    
     .logo, a {
       display: inline-block;
       vertical-align: middle;
@@ -124,6 +134,7 @@ nav {
       background-position: center;
       height: rem(80);
       margin: 0 rem(40);
+      width: rem(160);
     }
 
     a {
